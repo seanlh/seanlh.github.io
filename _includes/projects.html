@@ -1,5 +1,5 @@
 <section id="projects">
-    <h3 class="section-title">A Few Projects</h3>
+    <h3>A Few Projects</h3>
     {% assign projects-sorted = (site.projects | sort: 'date') | reverse %}
     {% for item in projects-sorted limit:6 %}
     <div class="project">

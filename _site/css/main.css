@@ -3,95 +3,71 @@ body {
   font-weight: 300; }
 
 h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
   font-size: 3rem;
-  line-height: 4rem;
-  margin: 1rem 0; }
+  line-height: 4rem; }
 
 h2 {
-  font-size: 1.5rem;
-  line-height: 2.5rem;
-  margin: 1rem 0; }
-
-h3, h4, h5, h6 {
-  font-size: 1rem;
-  line-height: 2rem;
-  margin: 1rem 0; }
-
-p {
-  font-size: 1rem;
-  line-height: 2.5rem;
-  margin: 1rem 0;
-  text-align: justify; }
-
-h1, h2 {
   font-family: "Playfair Display", serif;
-  font-weight: 400; }
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2.5rem; }
 
 h3, h4, h5, h6 {
   font-family: "Roboto Mono", monospace;
   font-weight: 400;
   letter-spacing: 0.1875em;
+  font-size: 1rem;
+  line-height: 2rem;
   text-transform: uppercase; }
 
+p {
+  font-size: 1rem;
+  line-height: 2.5rem;
+  text-align: justify;
+  text-indent: 4rem; }
+
+/*==================================================
+    CUSTOM AREAS
+==================================================*/
 .project-description {
   font-family: "Roboto Mono", monospace;
   font-size: 0.875rem;
   line-height: 0.875rem;
-  margin: 0; }
+  margin: 0;
+  text-indent: 0; }
 
 .button {
   font-family: "Roboto Mono", monospace;
+  font-weight: 400;
+  letter-spacing: 0.1875em;
   font-size: 0.8rem;
   text-transform: uppercase;
-  letter-spacing: 0.1875em; }
+  text-indent: 0; }
 
 .post-date {
   font-family: "Roboto Mono", monospace;
-  font-size: 0.625rem; }
+  font-size: 0.625rem;
+  text-indent: 0; }
 
 a {
   text-decoration: none;
   color: inherit; }
-
-#post-content p {
-  font-size: 1.2rem;
-  line-height: 3rem; }
 
 #footer li {
   font-family: "Playfair Display", serif;
   font-size: 1.25rem;
   font-weight: 700; }
 
+/*==================================================
+    ANIMATIONS
+==================================================*/
 @keyframes fadeIn {
   from {
     opacity: 0; }
   to {
     opacity: 1; } }
-h3 {
-  margin-bottom: 3rem;
-  color: #444; }
-
-p {
-  color: #444; }
-
-a, .button {
-  transition: all 0.3s ease-in-out 0s; }
-
-a:hover {
-  color: #d63031; }
-
-::selection {
-  background: #d63031;
-  color: #fff; }
-
-::-moz-selection {
-  background: #d63031;
-  color: #fff; }
-
-header, section, footer {
-  margin-top: 6rem;
-  margin-bottom: 6rem; }
-
 header {
   opacity: 0;
   /* make things invisible upon start */
@@ -102,7 +78,7 @@ header {
   animation-duration: 0.5s;
   animation-delay: 0s; }
 
-section, footer {
+section, main, article, footer {
   opacity: 0;
   /* make things invisible upon start */
   animation: fadeIn ease-in 1;
@@ -112,6 +88,69 @@ section, footer {
   animation-duration: 1s;
   animation-delay: 0.2s; }
 
+a, .button {
+  transition: all 0.3s ease-in-out 0s; }
+
+.project:before {
+  background-color: #d63031;
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  visibility: hidden;
+  transition: all 0.5s ease-in-out 0s; }
+
+.project:hover:before {
+  visibility: visible;
+  width: 100%; }
+
+.project {
+  position: relative;
+  transition: all 0.2s ease-in-out 0s; }
+
+.project:hover {
+  padding-left: 1.5rem;
+  color: #d63031; }
+
+::selection {
+  background: #d63031;
+  color: #fff; }
+
+::-moz-selection {
+  background: #d63031;
+  color: #fff; }
+
+h3, p {
+  color: #444; }
+
+a:hover {
+  color: #d63031; }
+
+/*==================================================
+    COLORING
+==================================================*/
+.project {
+  border-bottom: 2px solid #ddd; }
+
+.post-date {
+  color: #444; }
+
+.button {
+  color: #444;
+  border: 1px solid #ddd; }
+
+.button:hover {
+  color: #d63031;
+  border: 1px solid #d63031; }
+
+/*==================================================
+    POSITIONING
+==================================================*/
+/*=========================================
+        Responsive
+========================================*/
 #header {
   grid-area: header; }
 
@@ -124,101 +163,72 @@ section, footer {
 #footer {
   grid-area: footer; }
 
-#post-content {
+#content {
   grid-area: content; }
 
-#post-links {
+#links {
   grid-area: links; }
 
 .wrapper {
+  margin-left: auto;
+  margin-right: auto;
   width: 90%;
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-areas: "header" "projects" "blog" "footer";
-  margin-left: auto;
-  margin-right: auto; }
+  grid-template-columns: 1fr; }
 
-.wrapper-post {
-  width: 90%;
-  margin: 0 auto;
-  display: grid;
-  grid-template-areas: "header" "links" "content" "footer";
-  grid-template-columns: 1fr;
-  margin-left: auto;
-  margin-right: auto; }
+.col-homepage {
+  grid-template-areas: "header" "projects" "blog" "footer"; }
 
-#post-header {
-  margin: 2rem 0; }
+.col-simple {
+  grid-template-areas: "header" "content" "links" "footer"; }
 
-#post-content {
-  margin: 0; }
-
-#post-links {
-  margin: 0; }
+header, section, .blog-post, footer {
+  margin-top: 2rem;
+  margin-bottom: 2rem; }
 
 @media screen and (min-width: 65rem) {
+  header, section, .blog-post, footer {
+    margin-top: 4rem;
+    margin-bottom: 4rem; }
+
   #bio {
     margin-left: 13.25rem; }
 
   .wrapper {
+    margin-top: 20rem;
     width: 65rem;
+    grid-auto-flow: column;
+    grid-column-gap: 6rem; }
+
+  .col-homepage {
     grid-template-columns: 20.625em 1fr;
-    grid-auto-flow: column;
-    grid-column-gap: 6rem;
-    grid-template-areas: "header header" "projects blog" "footer footer";
-    margin-top: 15rem; }
+    grid-template-areas: "header header" "projects blog" "footer footer"; }
 
-  .wrapper-post {
-    margin-top: 25rem;
-    width: 65rem;
+  .col-simple {
     grid-template-columns: 1fr 20.625em;
-    grid-auto-flow: column;
-    grid-column-gap: 6rem;
-    grid-template-areas: "header ." "content links" "footer footer"; } }
+    grid-template-areas: "header ." "content links" "footer  footer"; } }
+/*=========================================
+        Margins and Padding
+========================================*/
+#intro, #bio, #content {
+  margin-top: 0;
+  margin-bottom: 0; }
+
 .project {
-  margin-top: 3rem;
-  padding-bottom: 3rem;
-  border-bottom: 2px solid #ddd;
-  position: relative;
-  transition: all 0.2s ease-in-out 0s; }
-
-.project:before {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  bottom: -2px;
-  left: 0;
-  background-color: #d63031;
-  visibility: hidden;
-  transition: all 0.5s ease-in-out 0s; }
-
-.project:hover:before {
-  visibility: visible;
-  width: 100%; }
-
-.project:hover {
-  padding-left: 1.5rem;
-  color: #d63031; }
-
-.post-date {
-  color: #444;
-  margin-right: 3rem; }
-
-.blog-post {
-  margin: 4rem 0; }
+  margin-top: 4rem;
+  padding-bottom: 4rem; }
 
 .button {
-  color: #444;
-  margin: 4em 0;
+  margin: 1em;
   padding: 1em 1.5em;
-  border: 1px solid #ddd;
   border-radius: 1.5em;
   display: inline-block; }
 
-.button:hover {
-  color: #d63031;
-  border: 1px solid #d63031; }
+.post-date {
+  margin-right: 3rem; }
+
+.no-gap {
+  margin-bottom: 0; }
 
 #footer ul {
   list-style-type: none;

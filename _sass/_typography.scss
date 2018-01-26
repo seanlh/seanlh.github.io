@@ -1,11 +1,19 @@
 // Set default fonts
 $font-stack-h: "Playfair Display", serif;
 $font-weight-h: 400;
-$font-stack-subh: "Roboto Mono", monospace;
-$font-weight-subh: 400;
+
+$font-stack-monospace: "Roboto Mono", monospace;
+$font-weight-monospace: 400;
+$letter-spacing-monospace: 0.1875em;
+
 $font-stack-p: "Merriweather", serif;
 $font-weight-p: 300;
-$letter-spacing: 0.1875em;
+
+@mixin font-monospace {
+    font-family: $font-stack-monospace;
+    font-weight: $font-weight-monospace;
+    letter-spacing: $letter-spacing-monospace;
+}
 
 body {
     font-family: $font-stack-p;
@@ -13,69 +21,62 @@ body {
 }
 
 h1 {
+    font-family: $font-stack-h;
+    font-weight: $font-weight-h;
     font-size: 3rem;
     line-height: 4rem;
-    margin: 1rem 0;
 }
 
 h2 {
+    font-family: $font-stack-h;
+    font-weight: $font-weight-h;
     font-size: 1.5rem;
     line-height: 2.5rem;
-    margin: 1rem 0;
 }
 
 h3, h4, h5, h6 {
+    @include font-monospace;
     font-size: 1rem;
     line-height: 2rem;
-    margin: 1rem 0;
+    text-transform: uppercase;
 }
 
 p {
     font-size: 1rem;
     line-height: 2.5rem; 
-    margin: 1rem 0; 
     text-align: justify;
+    text-indent: 4rem;
 }
 
-h1, h2 {
-    font-family: $font-stack-h;
-    font-weight: $font-weight-h;
-}
 
-h3, h4, h5, h6 {
-    font-family: $font-stack-subh;
-    font-weight: $font-weight-subh;
-    letter-spacing: $letter-spacing;
-    text-transform: uppercase;
-}
+/*==================================================
+    CUSTOM AREAS
+==================================================*/
 
 .project-description {
-    font-family: $font-stack-subh;
+    font-family: $font-stack-monospace;
     font-size: 0.875rem;
     line-height: 0.875rem;
     margin: 0;
+    text-indent: 0;
 }
 
 .button {
-    font-family: $font-stack-subh;
+    @include font-monospace;
     font-size: 0.8rem;
     text-transform: uppercase;
-    letter-spacing: $letter-spacing;
+    text-indent: 0;
 }
 
 .post-date {
-    font-family: $font-stack-subh;
+    font-family: $font-stack-monospace;
     font-size: 0.625rem;
+    text-indent: 0;
 }
 
 a {
     text-decoration: none;
     color: inherit;
-}
-
-#post-content p {
-    font-size: 1.2rem;
-    line-height: 3rem;
 }
 
 #footer li {
