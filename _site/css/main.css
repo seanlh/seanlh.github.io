@@ -1,0 +1,232 @@
+body {
+  font-family: "Merriweather", serif;
+  font-weight: 300; }
+
+h1 {
+  font-size: 3rem;
+  line-height: 4rem;
+  margin: 1rem 0; }
+
+h2 {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  margin: 1rem 0; }
+
+h3, h4, h5, h6 {
+  font-size: 1rem;
+  line-height: 2rem;
+  margin: 1rem 0; }
+
+p {
+  font-size: 1rem;
+  line-height: 2.5rem;
+  margin: 1rem 0;
+  text-align: justify; }
+
+h1, h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 400; }
+
+h3, h4, h5, h6 {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 400;
+  letter-spacing: 0.1875em;
+  text-transform: uppercase; }
+
+.project-description {
+  font-family: "Roboto Mono", monospace;
+  font-size: 0.875rem;
+  line-height: 0.875rem;
+  margin: 0; }
+
+.button {
+  font-family: "Roboto Mono", monospace;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1875em; }
+
+.post-date {
+  font-family: "Roboto Mono", monospace;
+  font-size: 0.625rem; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+#post-content p {
+  font-size: 1.2rem;
+  line-height: 3rem; }
+
+#footer li {
+  font-family: "Playfair Display", serif;
+  font-size: 1.25rem;
+  font-weight: 700; }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+h3 {
+  margin-bottom: 3rem;
+  color: #444; }
+
+p {
+  color: #444; }
+
+a, .button {
+  transition: all 0.3s ease-in-out 0s; }
+
+a:hover {
+  color: #d63031; }
+
+::selection {
+  background: #d63031;
+  color: #fff; }
+
+::-moz-selection {
+  background: #d63031;
+  color: #fff; }
+
+header, section, footer {
+  margin-top: 6rem;
+  margin-bottom: 6rem; }
+
+header {
+  opacity: 0;
+  /* make things invisible upon start */
+  animation: fadeIn ease-in 1;
+  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  animation-fill-mode: forwards;
+  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  animation-duration: 0.5s;
+  animation-delay: 0s; }
+
+section, footer {
+  opacity: 0;
+  /* make things invisible upon start */
+  animation: fadeIn ease-in 1;
+  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  animation-fill-mode: forwards;
+  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  animation-duration: 1s;
+  animation-delay: 0.2s; }
+
+#header {
+  grid-area: header; }
+
+#projects {
+  grid-area: projects; }
+
+#blog {
+  grid-area: blog; }
+
+#footer {
+  grid-area: footer; }
+
+#post-content {
+  grid-area: content; }
+
+#post-links {
+  grid-area: links; }
+
+.wrapper {
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "header" "projects" "blog" "footer";
+  margin-left: auto;
+  margin-right: auto; }
+
+.wrapper-post {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas: "header" "links" "content" "footer";
+  grid-template-columns: 1fr;
+  margin-left: auto;
+  margin-right: auto; }
+
+#post-header {
+  margin: 2rem 0; }
+
+#post-content {
+  margin: 0; }
+
+#post-links {
+  margin: 0; }
+
+@media screen and (min-width: 65rem) {
+  #bio {
+    margin-left: 13.25rem; }
+
+  .wrapper {
+    width: 65rem;
+    grid-template-columns: 20.625em 1fr;
+    grid-auto-flow: column;
+    grid-column-gap: 6rem;
+    grid-template-areas: "header header" "projects blog" "footer footer";
+    margin-top: 15rem; }
+
+  .wrapper-post {
+    margin-top: 25rem;
+    width: 65rem;
+    grid-template-columns: 1fr 20.625em;
+    grid-auto-flow: column;
+    grid-column-gap: 6rem;
+    grid-template-areas: "header ." "content links" "footer footer"; } }
+.project {
+  margin-top: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 2px solid #ddd;
+  position: relative;
+  transition: all 0.2s ease-in-out 0s; }
+
+.project:before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #d63031;
+  visibility: hidden;
+  transition: all 0.5s ease-in-out 0s; }
+
+.project:hover:before {
+  visibility: visible;
+  width: 100%; }
+
+.project:hover {
+  padding-left: 1.5rem;
+  color: #d63031; }
+
+.post-date {
+  color: #444;
+  margin-right: 3rem; }
+
+.blog-post {
+  margin: 4rem 0; }
+
+.button {
+  color: #444;
+  margin: 4em 0;
+  padding: 1em 1.5em;
+  border: 1px solid #ddd;
+  border-radius: 1.5em;
+  display: inline-block; }
+
+.button:hover {
+  color: #d63031;
+  border: 1px solid #d63031; }
+
+#footer ul {
+  list-style-type: none;
+  padding-left: 0;
+  text-align: right; }
+  #footer ul li:first-child {
+    margin-left: 0; }
+  #footer ul li {
+    display: inline-block;
+    margin-left: 8rem;
+    font-weight: 700; }

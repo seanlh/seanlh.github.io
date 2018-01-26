@@ -1,0 +1,253 @@
+---
+---
+
+// Imports
+@import "typography";
+
+// Variables
+$color-low-contrast: #444;
+$color-lowest-contrast: #ddd;
+$color-high-contrast: #000;
+$color-accent: #d63031;
+
+$width-wrapper: 65rem;
+$width-wrapper-post: 65rem;
+$grid-column-gap: 6rem;
+
+// Mixins
+@mixin center-horizontal {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin slider {
+    position: relative;
+}
+
+@mixin transition-quickest {
+    transition: all 0.2s ease-in-out 0s;
+}
+
+@mixin transition-quick {
+    transition: all 0.3s ease-in-out 0s;
+}
+
+@mixin transition-half-second {
+    transition: all 0.5s ease-in-out 0s;
+}
+
+@mixin slider-before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: $color-accent;
+    visibility: hidden;
+    @include transition-half-second;
+}
+
+@mixin slider-hover-before {
+    visibility: visible;
+    width: 100%;
+}
+
+// Animations
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@mixin fade-in-fast {
+    opacity:0;  /* make things invisible upon start */
+    animation:fadeIn ease-in 1; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+
+    animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+
+    animation-duration:0.5s;
+    animation-delay: 0s
+}
+@mixin fade-in-slow {
+    opacity:0;  /* make things invisible upon start */
+    animation:fadeIn ease-in 1; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+
+    animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+
+    animation-duration:1s;
+    animation-delay: 0.2s
+}
+
+// Text coloring
+h3 {
+    margin-bottom: 3rem;
+    color: $color-low-contrast;
+}
+
+p {
+    color: $color-low-contrast;
+}
+
+a, .button {
+    @include transition-quick;
+}
+
+a:hover {
+    color: $color-accent;
+}
+
+::selection {
+    background: $color-accent;
+    color: #fff;
+}
+
+::-moz-selection {
+    background: $color-accent;
+    color: #fff;
+}
+
+// Layout
+header, section, footer {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+}
+
+header {
+    @include fade-in-fast;
+}
+
+section, footer {
+    @include fade-in-slow;
+}
+
+#header         {grid-area: header}
+#projects       {grid-area: projects}
+#blog           {grid-area: blog}
+#footer         {grid-area: footer}
+#post-content   {grid-area: content}
+#post-links     {grid-area: links}
+
+.wrapper {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "header"
+        "projects"
+        "blog"
+        "footer";
+    @include center-horizontal;
+}
+
+.wrapper-post {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas:
+        "header"
+        "links"
+        "content"
+        "footer";
+    grid-template-columns: 1fr;
+    @include center-horizontal;
+}
+
+#post-header {
+    margin: 2rem 0;
+}
+
+#post-content {
+    margin: 0;
+}
+
+#post-links {
+    margin: 0;
+}
+
+@media screen and (min-width: $width-wrapper) {
+    #bio {
+        margin-left: 13.25rem;
+    }
+
+    .wrapper {
+        width: $width-wrapper;
+        grid-template-columns: 20.625em 1fr;
+        grid-auto-flow: column;
+        grid-column-gap: $grid-column-gap;
+        grid-template-areas:
+            "header header"
+            "projects blog"
+            "footer footer";
+        margin-top: 15rem;
+    }
+
+    .wrapper-post {
+        margin-top: 25rem;
+        width: $width-wrapper-post;
+        grid-template-columns: 1fr 20.625em;
+        grid-auto-flow: column;
+        grid-column-gap: $grid-column-gap;
+        grid-template-areas:
+            "header ."
+            "content links"
+            "footer footer";
+    }
+}
+
+.project {
+    margin-top: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 2px solid $color-lowest-contrast;
+    @include slider;
+    @include transition-quickest;
+}
+
+.project:before {
+    @include slider-before;
+}
+
+.project:hover:before {
+    @include slider-hover-before;
+}
+
+.project:hover {
+    padding-left: 1.5rem;
+    color: $color-accent;
+}
+
+.post-date {
+    color: $color-low-contrast;
+    margin-right: 3rem;
+}
+
+.blog-post {
+    margin: 4rem 0;
+}
+
+.button {
+    color: $color-low-contrast;
+    margin: 4em 0;
+    padding: 1em 1.5em;
+    border: 1px solid $color-lowest-contrast;
+    border-radius: 1.5em;
+    display: inline-block;
+}
+
+.button:hover {
+    color: $color-accent;
+    border: 1px solid $color-accent;
+}
+
+#footer {
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+        text-align: right;
+
+        li:first-child {
+            margin-left: 0;
+        }
+
+        li {
+            display: inline-block;
+            margin-left: 8rem;
+            font-weight: 700;
+        }
+    }
+}

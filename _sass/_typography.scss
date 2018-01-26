@@ -1,0 +1,85 @@
+// Set default fonts
+$font-stack-h: "Playfair Display", serif;
+$font-weight-h: 400;
+$font-stack-subh: "Roboto Mono", monospace;
+$font-weight-subh: 400;
+$font-stack-p: "Merriweather", serif;
+$font-weight-p: 300;
+$letter-spacing: 0.1875em;
+
+body {
+    font-family: $font-stack-p;
+    font-weight: $font-weight-p;
+}
+
+h1 {
+    font-size: 3rem;
+    line-height: 4rem;
+    margin: 1rem 0;
+}
+
+h2 {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    margin: 1rem 0;
+}
+
+h3, h4, h5, h6 {
+    font-size: 1rem;
+    line-height: 2rem;
+    margin: 1rem 0;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 2.5rem; 
+    margin: 1rem 0; 
+    text-align: justify;
+}
+
+h1, h2 {
+    font-family: $font-stack-h;
+    font-weight: $font-weight-h;
+}
+
+h3, h4, h5, h6 {
+    font-family: $font-stack-subh;
+    font-weight: $font-weight-subh;
+    letter-spacing: $letter-spacing;
+    text-transform: uppercase;
+}
+
+.project-description {
+    font-family: $font-stack-subh;
+    font-size: 0.875rem;
+    line-height: 0.875rem;
+    margin: 0;
+}
+
+.button {
+    font-family: $font-stack-subh;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: $letter-spacing;
+}
+
+.post-date {
+    font-family: $font-stack-subh;
+    font-size: 0.625rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#post-content p {
+    font-size: 1.2rem;
+    line-height: 3rem;
+}
+
+#footer li {
+    font-family: $font-stack-h;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
