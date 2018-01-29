@@ -1,10 +1,16 @@
 ---
 title: Chinese American Student Association
 description: Graphic Designer
-date: 2016-01-01
-layout: project
+date: 2016-05-05
+is_project: true
+behance: https://www.behance.net/gallery/61232065/Chinese-American-Student-Association
+layout: post
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras posuere urna id est finibus, in fermentum mi lobortis. Aliquam a bibendum lacus. Donec consequat lacinia metus, ac tempor sapien tincidunt eget. Phasellus et tellus vitae augue cursus dictum. Nam ac lectus tempor risus aliquet pellentesque. 
+![Chinese American Student Association (CASA) at the University of Central Florida, 2015-2016 School Year]({{ "/assets/casa/header.jpg" | absolute_url }})
 
-Ut sed dui et felis sagittis vulputate. Nullam ut nisl nec magna auctor facilisis. Nam consequat vulputate turpis quis feugiat. Nunc augue mi, maximus scelerisque dui auctor, dignissim egestas ligula. Maecenas placerat aliquet nunc, vel consectetur urna posuere sed.
+![CASA Logo]({{ "/assets/casa/logo.jpg" | absolute_url }})
+
+![CASA x Korean Student Association T-Shirt Design]({{ "/assets/casa/shirt.jpg" | absolute_url }})
+
+![CASA x KSA T-Shirt Mock Up]({{ "/assets/casa/mock-shirt.jpg" | absolute_url }})

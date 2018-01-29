@@ -202,13 +202,18 @@ header, section, .blog-post, footer {
     @include margin-vertical($height-gap-small);
 }
 
+section {
+    overflow: hidden;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
 @media screen and (min-width: $width-wrapper) {
     header, section, .blog-post, footer {
         @include margin-vertical($height-gap-medium);
-    }
-
-    #bio {
-        margin-left: 13.25rem;
     }
 
     .wrapper {
@@ -238,6 +243,14 @@ header, section, .blog-post, footer {
 /*=========================================
         Margins and Padding
 ========================================*/
+#header-text {
+    display: inline-block;
+}
+
+#bio {
+    text-align: right;
+}
+
 #intro, #bio, #content {
     @include margin-vertical(0);
 }

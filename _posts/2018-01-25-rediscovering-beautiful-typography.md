@@ -1,5 +1,5 @@
 ---
-title: "Rediscovering beautiful typography"
+title: "Latex and beautiful type"
 date: 2018-01-25
 categories: design
 layout: post

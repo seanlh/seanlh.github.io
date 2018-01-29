@@ -18,24 +18,29 @@
 </head>
 <body>
     <div class="wrapper col-simple">
-    <header id="header" class="no-gap">
+<header id="header" class="no-gap">
     <h1>Monty</h1>
 </header>
         <section id="content">
-            <p>Monty is a Python 3 trading bot originally created to trade Bitcoin on various exchanges. At the moment, Monty uses real-time exchange information using the GDAX WebSockets API in order to fetch the current price of bitcoin.</p>
+<p>Monty is a Python 3 trading bot. Monty currently uses the GDAX WebSockets API in order to fetch real-time price data of the BTC/USD trading pair.</p>
 
-<p>It then uses this information to construct the financial technical analysis indicators. The bot uses indicators such as the Moving Average Converge Divergence (MACD) and Relative Strength Index (RSI) to gauge what position to take in the market. It takes long/buy positions when it calculates the market may be at a low, and takes short/sell positions when it thinks the market is at a high.</p>
+<p>It then uses this price data in order to construct the market data used in the financial technical analysis algorithms. Monty can use indicators such as the Moving Average Convergence Divergence (MACD) and Relative Strength Index (RSI) to determine how to trade.</p>
+
+<p>The trading algorithm is developed in its own module, allowing the program to “plug and play” various strategies. Trading algorithms may use certain indicators to determine whether to enter the market or exit the market.</p>
 
         </section>
         <section id="links">
             <a href="/"><p class="button">Homepage</p></a>
-            <a href="https://github.com/seanlh/monty"><p class="button">GitHub Repo</p></a>
+<a href="https://github.com/seanlh/monty"><p class="button">GitHub Repo</p></a>
+
+
+
         </section>
-    <footer id="footer">
+<footer id="footer">
     <ul>
-        <li><a href="#">GitHub</a></li>
-        <li><a href="#">Résumé</a></li>
-        <li><a href="#">Email</a></li>
+        <li><a href="https://github.com/seanlh">GitHub</a></li>
+        <li><a href="http://localhost:4000/assets/casa/logo.jpg">Résumé</a></li>
+        <li><a href="mailto:hi@seanlh.com">Email</a></li>
     </ul>
 </footer>
     </div>

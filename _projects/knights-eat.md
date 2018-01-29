@@ -1,17 +1,11 @@
 ---
 title: Knights-Eat
-description: Bitcoin trading bot
+description: Javascript web application
 date: 2015-05-07
-github: #
+is_project: true
+github: https://github.com/seanlh/knights-eat
+demo: /assets/knights-eat/demo/
 layout: post
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras posuere urna id est finibus, in fermentum mi lobortis. Aliquam a bibendum lacus. Donec consequat lacinia metus, ac tempor sapien tincidunt eget. Phasellus et tellus vitae augue cursus dictum. Nam ac lectus tempor risus aliquet pellentesque. Ut sed dui et felis sagittis vulputate. Nullam ut nisl nec magna auctor facilisis. Nam consequat vulputate turpis quis feugiat. Nunc augue mi, maximus scelerisque dui auctor, dignissim egestas ligula. Maecenas placerat aliquet nunc, vel consectetur urna posuere sed.
-
-Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi tristique laoreet tellus, at sollicitudin orci porta porttitor. Curabitur facilisis aliquam tristique. Donec tristique urna sed congue elementum. Nulla scelerisque turpis non pellentesque volutpat. Fusce et vulputate tellus. Quisque ac faucibus turpis. Sed neque eros, venenatis ut nibh quis, tincidunt dictum nibh. Nulla quis ultrices felis, vel venenatis arcu. Proin ligula ante, dapibus eu odio ut, vulputate lobortis arcu. Morbi nec diam sem. Morbi porttitor gravida augue a dictum. Vivamus orci felis, ornare id molestie vitae, malesuada eu purus. Donec ultrices est non rhoncus feugiat.
-
-In sit amet eros efficitur, maximus elit vel, fermentum eros. Curabitur eu interdum nisi. Pellentesque lobortis neque sed magna accumsan commodo. Quisque vitae libero quis eros volutpat condimentum. Nunc laoreet enim quis sapien bibendum fermentum. Ut sit amet accumsan nisi. Vestibulum vehicula, metus ac tincidunt pharetra, magna tellus mollis sapien, sed euismod augue est ac enim. Curabitur lacinia urna lacus, sed facilisis est efficitur a. Suspendisse interdum, nibh vitae tincidunt mattis, orci mauris ultrices ante, in condimentum lacus sapien ac erat. Sed accumsan varius est, sed varius lacus sagittis sed. Aliquam erat volutpat. Nunc consequat tellus sed eros feugiat tristique.
-
-Curabitur viverra urna eget nulla vestibulum mollis. Maecenas ac ultricies justo, in tristique quam. Praesent vel scelerisque eros, id viverra ipsum. Nulla mollis nulla vitae posuere elementum. Donec placerat ex dapibus, maximus libero imperdiet, suscipit velit. Nulla facilisi. Sed hendrerit auctor quam, euismod sodales felis sodales a. Nunc in libero purus. In pretium sit amet velit non porttitor. Praesent vel neque quis magna bibendum commodo. Nunc porttitor ex leo, a semper lectus maximus non. Suspendisse vulputate malesuada ullamcorper. Integer in ante sit amet velit ultricies ornare ut quis urna. Vestibulum lacinia massa eget viverra gravida. Donec sagittis, erat ut pulvinar sodales, est libero molestie elit, sit amet consequat nulla leo eu metus.
-
-Aenean tincidunt mi et tortor feugiat, sit amet cursus massa consectetur. Curabitur dignissim massa orci, sit amet dictum justo ultricies id. Vivamus sed scelerisque mi, non rutrum mauris. Duis non venenatis mi. Quisque iaculis sagittis molestie. Duis venenatis at orci quis iaculis. Nunc id justo ac tortor placerat commodo. Praesent euismod vel arcu eu pharetra. Pellentesque hendrerit purus id nisi tincidunt lobortis. Integer mauris diam, porta in fermentum et, porttitor a arcu. Etiam sed est laoreet, sagittis dolor sed, dapibus diam. Morbi in mollis tellus, vel semper mauris. Nullam sollicitudin, ante nec mattis convallis, erat magna ornare eros, eget condimentum erat lorem non augue. Nullam consectetur, turpis et consequat egestas, eros quam ullamcorper diam, eget porta turpis velit sit amet lorem. 
+![Knights Eat Preview]({{ "/assets/knights-eat/preview.jpg" | absolute_url }})

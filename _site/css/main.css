@@ -28,6 +28,9 @@ p {
   text-align: justify;
   text-indent: 4rem; }
 
+code {
+  font-family: "Roboto Mono", monospace; }
+
 /*==================================================
     CUSTOM AREAS
 ==================================================*/
@@ -186,13 +189,17 @@ header, section, .blog-post, footer {
   margin-top: 2rem;
   margin-bottom: 2rem; }
 
+section {
+  overflow: hidden; }
+
+img {
+  display: block;
+  width: 100%; }
+
 @media screen and (min-width: 65rem) {
   header, section, .blog-post, footer {
     margin-top: 4rem;
     margin-bottom: 4rem; }
-
-  #bio {
-    margin-left: 13.25rem; }
 
   .wrapper {
     margin-top: 20rem;
@@ -210,6 +217,12 @@ header, section, .blog-post, footer {
 /*=========================================
         Margins and Padding
 ========================================*/
+#header-text {
+  display: inline-block; }
+
+#bio {
+  text-align: right; }
+
 #intro, #bio, #content {
   margin-top: 0;
   margin-bottom: 0; }

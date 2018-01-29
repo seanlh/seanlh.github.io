@@ -3,15 +3,18 @@
 {% include head.html %}
 <body>
     <div class="wrapper col-simple">
-    {% include header-post.html %}
+{% include header-post.html %}
         <section id="content">
-        {{ content }}
+{{ content }}
         </section>
         <section id="links">
             <a href="/"><p class="button">Homepage</p></a>
-            <a href="/blog"><p class="button">More posts</p></a>
+{% if page.github %}<a href="{{ page.github }}"><p class="button">GitHub Repo</p></a>{% endif %}
+{% if page.behance %}<a href="{{ page.behance }}"><p class="button">Behance</p></a>{% endif %}
+{% if page.demo %}<a href="{{ page.demo }}"><p class="button">View Live Demo</p></a>{% endif %}
+{% unless page.is_project %}<a href="{{ "/blog" | absolute_url }}"><p class="button">More posts</p></a>{% endunless %}
         </section>
-    {% include footer.html %}
+{% include footer.html %}
     </div>
 </body>
 </html>
