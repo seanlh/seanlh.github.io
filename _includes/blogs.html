@@ -1,10 +1,6 @@
-<section id="blog">
-    <h3>Some Thoughts</h3>
-    {% for post in site.posts limit:3 %}
+{% for post in site.posts %}
     <div class="blog-post">
         <h2><span class="post-date">{{ post.date | date_to_string }}</span><a href="{{  post.url }}">{{ post.title }}</a></h2>
         {{ post.excerpt }}
     </div>
-    {% endfor %}
-    <a href="/blog"><p class="button">See all my posts</p></a>
-</section>
+{% endfor %}

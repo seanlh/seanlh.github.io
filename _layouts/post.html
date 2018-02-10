@@ -11,7 +11,7 @@
             <a href="/"><p class="button">Homepage</p></a>
 {% if page.github %}<a href="{{ page.github }}"><p class="button">GitHub Repo</p></a>{% endif %}
 {% if page.behance %}<a href="{{ page.behance }}"><p class="button">Behance</p></a>{% endif %}
-{% if page.demo %}<a href="{{ page.demo }}"><p class="button">View Live Demo</p></a>{% endif %}
+{% if page.demo %}<a href="{{ page.demo }}"><p class="button">View Demo</p></a>{% endif %}
 {% unless page.is_project %}<a href="{{ "/blog" | absolute_url }}"><p class="button">More posts</p></a>{% endunless %}
         </section>
 {% include footer.html %}
