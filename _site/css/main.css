@@ -24,9 +24,7 @@ h3, h4, h5, h6 {
 
 p {
   font-size: 1rem;
-  line-height: 2.5rem;
-  text-align: justify;
-  text-indent: 4rem; }
+  line-height: 2.5rem; }
 
 code {
   font-family: "Roboto Mono", monospace; }
@@ -152,6 +150,43 @@ a:hover {
     POSITIONING
 ==================================================*/
 /*=========================================
+        Margins and Padding
+========================================*/
+#header-text {
+  display: inline-block; }
+
+#intro, #bio, #content {
+  margin-top: 0;
+  margin-bottom: 0; }
+
+.project {
+  margin-top: 4rem;
+  padding-bottom: 4rem; }
+
+.button {
+  margin: 1em;
+  padding: 1em 1.5em;
+  border-radius: 1.5em;
+  display: inline-block; }
+
+.post-date {
+  margin-right: 3rem; }
+
+.no-gap {
+  margin-bottom: 0; }
+
+#footer ul {
+  list-style-type: none;
+  padding-left: 0;
+  text-align: right; }
+  #footer ul li:first-child {
+    margin-left: 0; }
+  #footer ul li {
+    display: block;
+    font-weight: 700;
+    margin-top: 2em; }
+
+/*=========================================
         Responsive
 ========================================*/
 #header {
@@ -196,6 +231,13 @@ img {
   display: block;
   width: 100%; }
 
+.post-date {
+  display: block; }
+
+p {
+  text-align: left;
+  text-indent: 0; }
+
 @media screen and (min-width: 65rem) {
   header, section, .blog-post, footer {
     margin-top: 4rem;
@@ -213,43 +255,19 @@ img {
 
   .col-simple {
     grid-template-columns: 1fr 20.625em;
-    grid-template-areas: "header ." "content links" "footer  footer"; } }
-/*=========================================
-        Margins and Padding
-========================================*/
-#header-text {
-  display: inline-block; }
+    grid-template-areas: "header ." "content links" "footer  footer"; }
 
-#bio {
-  text-align: right; }
+  #bio {
+    text-align: right; }
 
-#intro, #bio, #content {
-  margin-top: 0;
-  margin-bottom: 0; }
+  .post-date {
+    display: inline; }
 
-.project {
-  margin-top: 4rem;
-  padding-bottom: 4rem; }
+  p {
+    text-align: justify;
+    text-indent: 4rem; }
 
-.button {
-  margin: 1em;
-  padding: 1em 1.5em;
-  border-radius: 1.5em;
-  display: inline-block; }
-
-.post-date {
-  margin-right: 3rem; }
-
-.no-gap {
-  margin-bottom: 0; }
-
-#footer ul {
-  list-style-type: none;
-  padding-left: 0;
-  text-align: right; }
-  #footer ul li:first-child {
-    margin-left: 0; }
   #footer ul li {
     display: inline-block;
     margin-left: 8rem;
-    font-weight: 700; }
+    margin-top: 0; } }

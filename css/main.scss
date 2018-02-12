@@ -166,6 +166,55 @@ a:hover {
 ==================================================*/
 
 /*=========================================
+        Margins and Padding
+========================================*/
+#header-text {
+    display: inline-block;
+}
+
+#intro, #bio, #content {
+    @include margin-vertical(0);
+}
+
+.project {
+    margin-top: $height-gap-medium;
+    padding-bottom: $height-gap-medium;
+}
+
+.button {
+    margin: 1em;
+    padding: 1em 1.5em;
+    border-radius: 1.5em;
+    display: inline-block;
+}
+
+.post-date {
+    margin-right: 3rem;
+}
+
+.no-gap {
+    margin-bottom: 0;
+}
+
+#footer {
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+        text-align: right;
+
+        li:first-child {
+            margin-left: 0;
+        }
+
+        li {
+            display: block;
+            font-weight: 700;
+            margin-top: 2em;
+        }
+    }
+}
+
+/*=========================================
         Responsive
 ========================================*/
 #header         {grid-area: header}
@@ -211,6 +260,15 @@ img {
     width: 100%;
 }
 
+.post-date {
+    display: block;
+}
+
+p {
+    text-align: left;
+    text-indent: 0;
+}
+
 @media screen and (min-width: $width-wrapper) {
     header, section, .blog-post, footer {
         @include margin-vertical($height-gap-medium);
@@ -238,57 +296,27 @@ img {
             "content links"
             "footer  footer";
     }
-}
 
-/*=========================================
-        Margins and Padding
-========================================*/
-#header-text {
-    display: inline-block;
-}
-
-#bio {
-    text-align: right;
-}
-
-#intro, #bio, #content {
-    @include margin-vertical(0);
-}
-
-.project {
-    margin-top: $height-gap-medium;
-    padding-bottom: $height-gap-medium;
-}
-
-.button {
-    margin: 1em;
-    padding: 1em 1.5em;
-    border-radius: 1.5em;
-    display: inline-block;
-}
-
-.post-date {
-    margin-right: 3rem;
-}
-
-.no-gap {
-    margin-bottom: 0;
-}
-
-#footer {
-    ul {
-        list-style-type: none;
-        padding-left: 0;
+    #bio {
         text-align: right;
+    }
 
-        li:first-child {
-            margin-left: 0;
-        }
+    .post-date {
+        display: inline;
+    }
 
-        li {
-            display: inline-block;
-            margin-left: 8rem;
-            font-weight: 700;
+    p {
+        text-align: justify;
+        text-indent: 4rem;
+    }
+
+    #footer {
+        ul {
+            li {
+                display: inline-block;
+                margin-left: 8rem;
+                margin-top: 0;
+            }
         }
     }
 }
