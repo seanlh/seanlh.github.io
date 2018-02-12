@@ -1,0 +1,3 @@
+[submodule "assets/knights-eat/demo"]
+	path = assets/knights-eat/demo
+	url = git@github.com:seanlh/knights-eat.git
