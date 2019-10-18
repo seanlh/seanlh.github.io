@@ -1,7 +1,0 @@
-name: Sean Hernandez
-slogan: Developer in Orlando
-description: Developer and designer living in Orlando, FL.
-collections:
-  projects:
-    output: true
-    permalink: /:collection/:path/
